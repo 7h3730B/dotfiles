@@ -1,0 +1,22 @@
+VSCode-Neovim:
+
+line    1:
+E117: Unknown function: plug#begin
+E492: Not an editor command: Plug 'sheerun/vim-polyglot'
+E492: Not an editor command: Plug 'jiangmiao/auto-pairs'
+E492: Not an editor command: Plug 'tomasiser/vim-code-dark'
+E492: Not an editor command: Plug 'scrooloose/nerdtree'
+E492: Not an editor command: Plug 'psliwka/vim-smoothie'
+E492: Not an editor command: Plug 'vim-airline/vim-airline'
+E492: Not an editor command: Plug 'vim-airline/vim-airline-themes'
+E492: Not an editor command: Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+E492: Not an editor command: Plug 'glts/vim-radical'
+E492: Not an editor command: Plug 'glts/vim-magnum'
+E492: Not an editor command: Plug 'ryanoasis/vim-devicons'
+E492: Not an editor command: Plug 'joshdick/onedark.vim'
+E492: Not an editor command: Plug 'tpope/vim-commentary'
+E492: Not an editor command: Plug 'junegunn/rainbow_parentheses.vim'
+E492: Not an editor command: Plug 'mhinz/vim-signify'
+E492: Not an editor command: Plug 'airblade/vim-rooter'
+E117: Unknown function: plug#end
+E185: Cannot find color scheme 'codedark'
