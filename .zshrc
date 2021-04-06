@@ -129,9 +129,11 @@ alias up="python -m http.server"
 . "${HOME}/.cache/wal/colors.sh"
 
 # Create the alias.
-alias dmen='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
+alias dmenu='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
 (cat ~/.cache/wal/sequences &)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias dotfiles='/usr/bin/git --git-dir=/home/teo/.dotfiles/ --work-tree=/home/teo'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -7,6 +7,14 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'tomasiser/vim-code-dark'
 
+Plug 'itchyny/lightline.vim'
+Plug 'machakann/vim-highlightedyank'
+"
+" Fuzzy finder
+Plug 'airblade/vim-rooter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " File tree
 Plug 'scrooloose/nerdtree'
 
@@ -31,7 +39,13 @@ Plug 'junegunn/rainbow_parentheses.vim'
 " Git --
 Plug 'mhinz/vim-signify'
 
-Plug 'airblade/vim-rooter'
+" Syntactic language support
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+Plug 'rust-lang/rust.vim'
+Plug 'rhysd/vim-clang-format'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -46,7 +60,7 @@ set rnu
 
 " Store an undo buffer in a file in $HOME/.vimundo
 set undofile
-set undodir=~/AppData/Local/nvim/.vimundo
+set undodir=~/.nvim/.vimundo
 set undolevels=1000
 set undoreload=10000
 
@@ -90,7 +104,7 @@ set nowrap
 
 " Make backspace behave like in other editors
 set backspace=indent,eol,start
-set hidden                              " Required to keep multiple buffers open multiple buffers
+set hidden  " Required to keep multiple buffers open multiple buffers
 " Other options
 set smarttab
 set expandtab
@@ -163,9 +177,23 @@ let g:signify_sign_show_text = 1
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
 
-:inoremap <M-}> } " AltGr+4 on French, AltGr+9 on German
-:inoremap <M-[> [ " AltGr+5 on French, AltGr+8 on German
-:inoremap <M-{> { " AltGr+7 on German
+  nnoremap <Leader>w :w<CR>
+  nmap <Leader><Leader> V
+  nmap <C-p> :Files<CR>
+
+nmap <leader>; :Buffers<CR>
+
+" rust
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
+let g:rust_clip_command = 'xclip -selection clipboard'
+
+" Open new file adjacent to current file
+nnoremap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" <leader>q shows stats
+nnoremap <leader>q g<c-g>
 
   map <C-n> :NERDTreeToggle<CR>
 
