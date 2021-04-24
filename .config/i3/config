@@ -175,6 +175,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Vim anywhere
+bindsym $mod+Alt+v exec ~/.vim-anywhere/bin/run
+
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
 # from the generated scheme.

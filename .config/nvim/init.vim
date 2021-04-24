@@ -5,6 +5,8 @@ Plug 'sheerun/vim-polyglot'
 " Automatically close brackets
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'vimwiki/vimwiki'
+
 Plug 'tomasiser/vim-code-dark'
 
 Plug 'itchyny/lightline.vim'
@@ -150,6 +152,10 @@ set showtabline=2
 
 " We don't need to see things like -- INSERT -- anymore
 set noshowmode
+
+" Make vimwiki work with obsidian
+let g:vimwiki_list = [{'path': '~/notes/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " ---------------------------------------------------------------
 " signify
