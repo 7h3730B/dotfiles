@@ -11,7 +11,9 @@ Plug 'tomasiser/vim-code-dark'
 
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
-"
+
+Plug 'simrat39/symbols-outline.nvim'
+
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -157,6 +159,8 @@ set noshowmode
 let g:vimwiki_list = [{'path': '~/notes/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
+
+
 " ---------------------------------------------------------------
 " signify
 
@@ -184,6 +188,7 @@ let g:signify_sign_show_text = 1
   nnoremap <C-l> <C-w>l
 
   nnoremap <Leader>w :w<CR>
+  map <c-s> :SymbolsOutline<CR>
   nmap <Leader><Leader> V
   nmap <C-p> :Files<CR>
 
@@ -198,6 +203,10 @@ let g:rust_clip_command = 'xclip -selection clipboard'
 " Open new file adjacent to current file
 nnoremap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
+" Use arrow keys in visual mode for indenting
+vmap <Left> <gv
+vmap <Right> >gv
+"
 " <leader>q shows stats
 nnoremap <leader>q g<c-g>
 
