@@ -262,3 +262,4 @@ let g:mkdp_filetypes = ['markdown']
 
 " example
 nmap <leader>p <Plug>MarkdownPreviewToggle
+
